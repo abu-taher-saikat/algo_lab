@@ -9,11 +9,11 @@ int main(){
     printf("Please input a year: ");
     scanf("%d", &inputYear);
 
-    /* To get a  a leap year, check 
-       A leap year is exactly divisible by 4. 
-       but, centuries (years divisible by 100), while they are still divisible by 4, 
-       they are not leap years unless they are also divisible by 400. 
-       This means that the year 2000 was a leap year although 1900 was not.  */
+    /* To identify a leap year: 
+    - Must be divisible by 4 
+    - Centurial years must be divisible by 400 
+    (e.g., 2000 = leap year, 1900 = not). 
+    */
 
     if ((inputYear % 4 == 0 && inputYear % 100 != 0) || inputYear % 400 == 0){
         printf("%d is a leap year.\n", inputYear); // If the year is leap year
